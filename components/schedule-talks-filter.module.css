@@ -1,0 +1,37 @@
+
+.filter-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.filter-select {
+  flex-basis: 200px;
+  margin-left: var(--space-4x);
+}
+
+.button {
+  padding: var(--space-2x) var(--space-6x);
+  border: 1px solid var(--accents-6);
+  border-radius: var(--space-2x);
+  font-size: var(--text-sm);
+  color: var(--accents-5);
+  margin-left: var(--space-2x);
+  width: 185px;
+  text-align: center;
+}
+
+.filter-switch {
+  display: flex;
+  align-items: center;
+}
+
+.switch-label {
+  font-size: 16px;
+  color: var(--accents-4);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.switch-label.active {
+  color: var(--brand);
+}

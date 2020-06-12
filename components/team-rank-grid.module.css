@@ -1,0 +1,103 @@
+/**
+ * Copyright 2020 Vercel Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.grid {
+  margin: 50px auto;
+  width: 100%;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    padding: 0;
+  }
+}
+
+.grid::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  border-radius: var(--space-2x);
+  background: #111111;
+  background-clip: content-box, border-box;
+  background-image: linear-gradient(white, white), linear-gradient(to right, var(--light-gray), var(--light-gray));
+  padding: 1px;
+  cursor: pointer;
+}
+
+.card:hover,
+.card:focus {
+  outline: none;
+  background-image: linear-gradient(var(--accents-1), var(--accents-1)),
+    linear-gradient(to right, var(--brand), var(--brand));
+}
+
+.leaders {
+  background-image: linear-gradient(var(--brand), var(--brand)),
+  linear-gradient(to right, var(--brand), var(--brand));
+  padding: 0 var(--space-32x) var(--space-2x);
+}
+
+.leaders:first-child {
+  padding-top: var(--space-4x);
+}
+
+.leaders:last-child {
+  padding-bottom: var(--space-4x);
+  margin-bottom: var(--space-4x);
+}
+
+.leaders .cardBody {
+  display: flex;
+  padding: var(--space-4x) var(--space-8x);
+  color: white;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 auto;
+  background: linear-gradient(#111111, #111111);
+  border-radius: 10px;
+}
+
+.teams .cardBody {
+  width: 50%;
+  display: flex;
+  padding: var(--space-2x) var(--space-8x);
+  margin: var(--space-2x) auto;
+  color: white;
+  justify-content: space-between;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 10px;
+}
+
+@media (max-width: 500px) {
+  .grid {
+    margin: var(--space-6x) auto;
+  }
+  .leaders {
+    padding: 0 var(--space-8x) var(--space-2x);
+  }
+  .leaders .cardBody {
+    width: 100%;
+  }
+  .participants .cardBody {
+    width: 80%;
+  }
+}

@@ -1,0 +1,329 @@
+/**
+ * Copyright 2020 Vercel Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  color: var(--gray);
+}
+
+.stream {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+@media screen and (min-width: 1032px) {
+  .main-section {
+    flex-direction: row;
+  }
+
+  .iframe-section {
+    width: calc(100vw - 303px);
+  }
+}
+
+.backlink {
+  color: var(--gray);
+  padding: var(--space-8x) var(--space-4x) var(--space-4x) var(--space-4x);
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.backlink>svg {
+  margin-right: var(--space-2x);
+}
+
+.backlink:hover {
+  color: var(--brand);
+}
+
+.talk-details {
+  padding: var(--space-4x) 0;
+  display: flex;
+  flex-direction: column;
+  flex: unset;
+}
+
+.talk-title {
+  font-weight: 800;
+  color: var(--gray);
+  font-size: 28px;
+  margin: 0;
+  margin-top: var(--space-6x);
+  line-height: 1.2;
+}
+
+.speakers-section {
+  padding: var(--space-4x);
+}
+
+.bio {
+  color: var(--gray);
+  max-width: 800px;
+}
+
+.image {
+  border-radius: var(--space-2x);
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    padding: var(--space-8x);
+  }
+
+  .backlink {
+    padding: 0;
+  }
+
+  .talk-details {
+    padding: 0;
+    padding-left: var(--space-8x);
+  }
+
+  .speakers-section {
+    color: var(--gray);
+  }
+
+  .image {
+    max-width: 300px;
+    max-height: 400px;
+  }
+
+  .iframe-section {
+    min-height: 480px;
+  }
+}
+
+.name {
+  font-weight: 800;
+  color: var(--gray);
+  font-size: 38px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.company {
+  color: var(--gray);
+}
+
+.company:hover {
+  color: var(--gray);
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 20px;
+}
+
+.talk-links {
+  font-size: 24px;
+  letter-spacing: -0.05em;
+  color: var(--gray);
+  margin-bottom: var(--space-4x);
+}
+
+.talk-link a {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.label {
+  margin-left: var(--space-4x);
+}
+
+.small-heading {
+  font-size: var(--text-lg);
+  margin-top: var(--space-6x);
+  margin-bottom: var(--space-3x);
+}
+
+.speaker-row {
+  display: flex;
+  align-items: center;
+  margin-top: var(--space-4x);
+  padding-left: var(--space-4x);
+  cursor: pointer;
+}
+
+.speaker-name {
+  margin: 0;
+  margin-left: var(--space-2x);
+  font-size: var(--text-md);
+}
+
+.avatar {
+  border-radius: 25px;
+}
+
+.backlink.sidebar {
+  padding: var(--space-4x) var(--space-2x);
+}
+
+.talk-title.sidebar {
+  font-size: var(--space-8x);
+  ;
+}
+
+.speaker-row.sidebar {
+  padding-left: var(--space-2x);
+}
+
+
+.time-join-lane {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.time {
+  font-size: var(--text-sm);
+}
+
+.join-action {
+  display: flex;
+  align-items: center;
+}
+
+.remaining-seats {
+  color: var(--brand);
+}
+
+.join-button {
+  color: var(--brand);
+  border: 1px solid var(--brand);
+  border-radius: 5px;
+  padding: 0 5px;
+  margin-left: var(--space-2x);
+  cursor: pointer
+}
+
+.already-booked {
+  background: var(--brand);
+  width: 36px;
+  height: 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fully-booked {
+  background-color: var(--light-gray);
+  color: white;
+  padding: 0 8px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 18px;
+}
+
+.participant-number {
+  color: black;
+  display: flex;
+  align-items: center;
+}
+
+.external-embed-section {
+  flex-grow: 1;
+}
+
+.full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.iframe-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.icon-fullscreen {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  padding: 5px;
+  background: white;
+  cursor: pointer;
+  display: flex;
+}
+
+.full .icon-fullscreen {
+  top: 90px;
+}
+
+@media screen and (min-width: 1032px) {
+  .main-section {
+    height: calc(100vh - var(--header-height));
+  }
+
+  .speakers-section {
+    height: unset;
+    min-height: 340px;
+    width: 550px;
+    height: 100%;
+    overflow: auto;
+    padding: var(--space-8x);
+  }
+
+  .talk-title {
+    font-size: 38px;
+  }
+
+  .time-join-lane {
+    flex-direction: row;
+    align-items: center;
+  } 
+
+  .speakers-section.expanded {
+    width: 100%;
+    padding: var(--space-8x) var(--space-4x) var(--space-16x);
+  }
+
+  .sidebar .backlink {
+    padding: 0;
+  }
+
+  .iframe-section {
+    min-height: 640px;
+  }
+}
+
+.video-container {
+  position: relative;
+  width: 350px;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.video-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

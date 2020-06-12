@@ -1,0 +1,63 @@
+/**
+ * Copyright 2020 Vercel Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.container {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.row-wrapper {
+  display: block;/* inline-block; */
+}
+
+.warmup-row {
+  margin-top: var(--space-4x);
+  padding: var(--space-4x) 0;
+}
+
+h3.stage-name {
+  padding: var(--space-2x) var(--space-8x);
+  color: var(--brand);
+}
+
+.row {
+  padding: var(--space-4x) var(--space-8x);
+  border-bottom: 1px solid var(--accents-7);
+  width: 100%;
+  display: flex;
+}
+
+.card {
+  flex: 23% 0;
+  margin: var(--space-4x) 1%;
+  border: 1px solid #333333;
+  border-radius: 10px;
+}
+
+.card h5 {
+  border-bottom: 1px solid var(--accents-7);
+  margin: 0;
+  padding: var(--space-4x);
+  font-size: 1rem;
+}
+
+.card p {
+  margin: var(--space-2x);
+}

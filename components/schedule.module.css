@@ -1,0 +1,142 @@
+/**
+ * Copyright 2020 Vercel Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.container {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.row-wrapper {
+  display: block;/* inline-block; */
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.stage-section {
+  padding: var(--space-8x);
+  border-bottom: 1px solid var(--accents-7);
+  width: 100%;
+}
+
+.stage-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.crystal-stage-header {
+  display: flex;
+}
+
+.stage-name {
+  font-size: 22px;
+  color: #fff;
+  line-height: 1.15;
+  letter-spacing: -0.05em;
+  font-weight: 800;
+  min-width: 220px;
+  padding-bottom: var(--space-2x);
+  left: initial;
+  color: var(--brand);
+}
+
+.btn-visit-stage {
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+  background: var(--brand);
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 0 var(--space-6x);
+  cursor: pointer;
+  line-height: 2rem;
+  align-self: flex-end;
+}
+
+.event-date-row {
+  padding: var(--space-2x) var(--space-4x);
+  margin-top: var(--space-2x);
+  margin-bottom: var(--space-4x);
+  overflow-x: auto;
+  width: 100%;
+}
+
+.event-date {
+  font-size: 20px;
+  margin-top: var(--space-4x);
+  margin-bottom: var(--space-2x);
+}
+
+
+.talks {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.talks > div {
+  margin-right: 24px;
+}
+
+@media (min-width: 500px) {
+  .container {
+    border-top: 1px solid var(--accents-7);
+    margin-top: var(--space-4x);
+  }
+
+  .row {
+    margin: 0 var(--space-8x) 0 0;
+    flex-direction: row;
+    padding: var(--space-8x) 0;
+  }
+
+  .talks {
+    flex-direction: row;
+    margin-top: 0;
+  }
+
+  .stage-name {
+    font-size: var(--space-8x);
+    position: sticky;
+    left: 0;
+    z-index: 1;
+  }
+
+  .stage-header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .crystal-stage-header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .btn-visit-stage {
+    align-self: center;
+  }
+
+}

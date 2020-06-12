@@ -1,0 +1,35 @@
+.hero {
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  font-weight: 800;
+  margin: var(--space-8x) 24px var(--space-2x);
+}
+
+.description {
+  font-size: var(--text-md);
+  line-height: 1.4;
+  color: var(--secondary-color);
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    font-size: 40px;
+    margin: var(--space-16x) var(--space-8x) var(--space-4x);
+  }
+}
+
+.description-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: var(--space-8x);
+  margin-right: var(--space-8x);
+}
+
+@media (min-width: 768px) {
+  .description-wrapper {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,28 @@
+.category-filter {
+  display: flex;
+  align-items: center;
+  margin-left: var(--space-8x);
+}
+
+.item {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: var(--space-2x);
+  display: flex;
+  align-items: center;
+  padding: var(--space-2x) var(--space-3x);
+  margin-left: var(--space-4x);
+}
+
+.item.disabled {
+  border-color: var(--light-gray);
+}
+
+.label {
+  margin-left: var(--space-3x);
+  font-weight: bold;
+}
+
+.item.disabled .label {
+  color: var(--light-gray);
+}
